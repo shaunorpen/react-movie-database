@@ -33,4 +33,16 @@ export const StyledMovieThumb = styled.div`
       cursor: pointer;
     }
   }
+
+  p {
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1c1c1c;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
 `;
