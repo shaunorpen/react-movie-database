@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { navigate } from '@reach/router';
 import FontAwesome from 'react-fontawesome';
 
 import { StyledSearchBar, StyledSearchBarContent } from '../styles/StyledSearchBar';
@@ -16,6 +17,8 @@ const SearchBar = ({ callback }) => {
 
         timeOut.current = setTimeout(() => {
             callback(value);
+            const queryString = value ? `/?search=${value}` : '/';
+            navigate(queryString);
         }, 500)
     }
 
