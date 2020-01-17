@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL, POPULAR_BASE_URL, SEARCH_BASE_URL } from '../config';
+import { navigate } from '@reach/router';
 
 import HeroImage from './elements/HeroImage';
 import SearchBar from './elements/SearchBar';
@@ -23,6 +24,9 @@ const Home = () => {
 
     const searchMovies = search => {
         const endpoint = search ? SEARCH_BASE_URL + search : POPULAR_BASE_URL;
+        const queryString = search ? `/?search=${search}` : '/';
+        
+        navigate(queryString);
 
         setSearchTerm(search);
         fetchMovies(endpoint);
