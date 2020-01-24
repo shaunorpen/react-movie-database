@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL, POPULAR_BASE_URL, SEARCH_BASE_URL } from '../config';
 import { navigate } from '@reach/router';
 
